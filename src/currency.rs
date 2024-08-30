@@ -137,7 +137,7 @@ pub fn extract_currency_to_usd(timestamp: i64, s: &str) -> Result<u32> {
     let inverse_conversion_rate = 1.0 / best_conversion_rate;
 
     // convert to USD if not already in USD
-    currency = currency.convert(inverse_conversion_rate, symbol);
+    currency = currency.convert(inverse_conversion_rate, '$');
 
     // convert decimal currency value to uint whole points
     Ok(currency.value().to_u32().ok_or(WatchIdError::Currency)?)
