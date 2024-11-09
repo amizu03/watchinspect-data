@@ -17,8 +17,9 @@ while (current_year < now.year) or (
     print(f"month: {current_year}-{current_month:02d}")
 
     total_months += 1
+    # https://www.xe.com/currencytables/
     data = requests.get(
-        f"https://www.xe.com/_next/data/xmuAvMlZtSYM6dJGXWBP9/en/currencytables.json?from=USD&date={current_year}-{current_month:02d}-01"
+        f"https://www.xe.com/_next/data/lFsrCXsUT1R4egR02xO0Y/en/currencytables.json?from=USD&date={current_year}-{current_month:02d}-01"
     ).json()
 
     for currency in data["pageProps"]["historicRates"]:

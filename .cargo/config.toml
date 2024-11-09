@@ -1,0 +1,4 @@
+[unstable]
+mtime-on-use = true
+build-std = ["std", "core", "alloc", "proc_macro"]
+# build-std-features = ["compiler-builtins-mem", "panic_immediate_abort"]
