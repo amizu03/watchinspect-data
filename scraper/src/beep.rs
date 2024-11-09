@@ -8,10 +8,10 @@ pub fn beep() {
 
         // Create a new sink for the sine wave sound
         let sink = Sink::try_new(&stream_handle).unwrap();
-        let source = SineWave::new(783.0); // G5 @ 783hz
+        let source = SineWave::new(709.0);
         sink.append(source);
 
-        thread::sleep(Duration::from_millis(250));
+        thread::sleep(Duration::from_millis(200));
 
         sink.stop(); // Stop sound
     });
