@@ -60,7 +60,12 @@ impl RolexForumsEntry {
                     // Update is item is sold
                     let lower = trimmed.to_lowercase();
 
-                    if lower.contains("sold") && !lower.contains("not sold") {
+                    if lower.contains("sold")
+                        && !lower.contains("not sold")
+                        // isn't sold
+                        // isnt sold
+                        && !lower.contains("nt sold")
+                    {
                         self.is_sold = true;
                     }
 
